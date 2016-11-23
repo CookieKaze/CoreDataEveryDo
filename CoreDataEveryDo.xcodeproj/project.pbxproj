@@ -333,6 +333,7 @@
 				1D4F68371DE648D000165C43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

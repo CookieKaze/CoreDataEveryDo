@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showAddView)];
@@ -33,21 +33,21 @@
 }
 
 
-//-(void) addNewTask: (Todo*) todo {
-//    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-//
-//    Todo * newTask = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:context];
-//    newTask.title = todo.title;
-//    newTask.complete = todo.complete;
-//    newTask.priority = todo.priority;
-//
-//    // Save the context.
-//    NSError *error = nil;
-//    if (![context save:&error]) {
-//        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
-//        abort();
-//    }
-//}
+-(void) addNewTask: (Todo*) todo {
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+
+    Todo * newTask = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:context];
+    newTask.title = todo.title;
+    newTask.complete = todo.complete;
+    newTask.priority = todo.priority;
+
+    // Save the context.
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+        abort();
+    }
+}
 
 -(void) showAddView {
     [self performSegueWithIdentifier:@"addView" sender:nil];

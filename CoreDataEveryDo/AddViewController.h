@@ -16,5 +16,4 @@
 
 @interface AddViewController : UIViewController
 @property (weak, nonatomic) id <addTaskDelegate> delegate;
-//@property (nonatomic) NSManagedObjectContext * context;
 @end
