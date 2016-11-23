@@ -16,6 +16,7 @@
 		1D4F68311DE648D000165C43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4F682F1DE648D000165C43 /* LaunchScreen.storyboard */; };
 		1D4F683C1DE6491D00165C43 /* Todo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F68391DE6491D00165C43 /* Todo+CoreDataClass.m */; };
 		1D4F683D1DE6491D00165C43 /* Todo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F683B1DE6491D00165C43 /* Todo+CoreDataProperties.m */; };
+		1D4F68401DE6532B00165C43 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F683F1DE6532B00165C43 /* AddViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		1D4F68391DE6491D00165C43 /* Todo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Todo+CoreDataClass.m"; sourceTree = "<group>"; };
 		1D4F683A1DE6491D00165C43 /* Todo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Todo+CoreDataProperties.h"; sourceTree = "<group>"; };
 		1D4F683B1DE6491D00165C43 /* Todo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Todo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1D4F683E1DE6532B00165C43 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		1D4F683F1DE6532B00165C43 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				1D4F683A1DE6491D00165C43 /* Todo+CoreDataProperties.h */,
 				1D4F683B1DE6491D00165C43 /* Todo+CoreDataProperties.m */,
 				1D4F682A1DE648D000165C43 /* Main.storyboard */,
+				1D4F683E1DE6532B00165C43 /* AddViewController.h */,
+				1D4F683F1DE6532B00165C43 /* AddViewController.m */,
 				1D4F682D1DE648D000165C43 /* Assets.xcassets */,
 				1D4F682F1DE648D000165C43 /* LaunchScreen.storyboard */,
 				1D4F68321DE648D000165C43 /* Info.plist */,
@@ -170,6 +175,7 @@
 				1D4F68291DE648D000165C43 /* DetailViewController.m in Sources */,
 				1D4F683D1DE6491D00165C43 /* Todo+CoreDataProperties.m in Sources */,
 				1D4F68261DE648D000165C43 /* MasterViewController.m in Sources */,
+				1D4F68401DE6532B00165C43 /* AddViewController.m in Sources */,
 				1D4F68201DE648D000165C43 /* AppDelegate.m in Sources */,
 				1D4F683C1DE6491D00165C43 /* Todo+CoreDataClass.m in Sources */,
 				1D4F681D1DE648CF00165C43 /* main.m in Sources */,
