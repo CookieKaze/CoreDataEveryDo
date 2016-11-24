@@ -32,23 +32,6 @@
     [super viewWillAppear:animated];
 }
 
-
--(void) addNewTask: (Todo*) todo {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-
-    Todo * newTask = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:context];
-    newTask.title = todo.title;
-    newTask.complete = todo.complete;
-    newTask.priority = todo.priority;
-
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
-        abort();
-    }
-}
-
 -(void) showAddView {
     [self performSegueWithIdentifier:@"addView" sender:nil];
 }
@@ -63,6 +46,10 @@
         [controller setTodoItem:todoItem];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
+    }
+    if ([[segue identifier] isEqualToString:@"addView"]) {
+        AddViewController * avc = [segue destinationViewController];
+        avc.context = self.managedObjectContext;
     }
 }
 

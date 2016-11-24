@@ -10,10 +10,6 @@
 
 @class  Todo;
 
-@protocol addTaskDelegate <NSObject>
--(void) addNewTask: (Todo*) Todo;
-@end
-
 @interface AddViewController : UIViewController
-@property (weak, nonatomic) id <addTaskDelegate> delegate;
+@property (nonatomic) NSManagedObjectContext * context;
 @end

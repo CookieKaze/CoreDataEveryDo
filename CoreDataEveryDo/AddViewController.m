@@ -27,11 +27,16 @@
 }
 
 - (IBAction)addTask:(UIButton *)sender {
-    Todo * newTodo = [[Todo alloc] init];
-    newTodo.title = self.titleTextField.text;
-    newTodo.priority = (int)self.prioritySlider.value;
-    newTodo.complete = NO;
-    [self.delegate addNewTask:newTodo];
+    Todo * newTask = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:self.context];
+    newTask.title = self.titleTextField.text;
+    newTask.priority = (int)self.prioritySlider.value;
+    newTask.complete = NO;
+    // Save the context.
+    NSError *error = nil;
+    if (![self.context save:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+        abort();
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 
