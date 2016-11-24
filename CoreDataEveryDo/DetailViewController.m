@@ -17,7 +17,14 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.todoItem) {
-        self.detailDescriptionLabel.text = self.todoItem.title;
+        self.titleLabel.text = [NSString stringWithFormat:@"Title: %@",self.todoItem.title];
+        self.priorityLabel.text = [NSString stringWithFormat:@"Priority: %d",self.todoItem.priority];
+        if (self.todoItem.complete == 0) {
+            self.completeLabel.text = [NSString stringWithFormat:@"Complete: No"];
+        }else {
+            self.completeLabel.text = [NSString stringWithFormat:@"Complete: Yes"];
+        }
+        
     }
 }
 
